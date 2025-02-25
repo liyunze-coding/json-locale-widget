@@ -1,4 +1,4 @@
-function displayTime() {
+function updateTime(timeElement, dateElement) {
 	let date = new Date();
 	let time = date.toLocaleTimeString();
 	let current_day = date.toLocaleDateString("en-UK", {
@@ -7,11 +7,16 @@ function displayTime() {
 		year: "numeric",
 	});
 
-	document.getElementById("time").innerText = time;
-	document.getElementById("date").innerText = current_day;
+	timeElement.innerText = time;
+	dateElement.innerText = current_day;
 }
 
-displayTime();
-setInterval(function () {
-	displayTime();
-}, 1000);
+document.addEventListener("DOMContentLoaded", () => {
+	const timeElement = document.querySelector("#time");
+	const dateElement = document.querySelector("#date");
+
+	updateTime(timeElement, dateElement);
+	setInterval(function () {
+		updateTime(timeElement, dateElement);
+	}, 1000);
+});
