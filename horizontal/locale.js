@@ -1,17 +1,13 @@
-function displayTime() {
-	let date = new Date();
-	let time = date.toLocaleTimeString();
-	let current_day = date.toLocaleDateString("en-UK", {
-		day: "numeric",
-		month: "short",
-		year: "numeric",
-	});
+const timeElement = document.getElementById("time");
+const dateElement = document.getElementById("date");
 
-	document.getElementById("time").innerText = time;
-	document.getElementById("date").innerText = current_day;
+function updateTime() {
+    const now = new Date();
+    timeElement.innerText = now.toLocaleTimeString();
+    dateElement.innerText = now.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
 }
 
-displayTime();
-setInterval(function () {
-	displayTime();
-}, 1000);
+document.addEventListener("DOMContentLoaded", () => {
+    updateTime();
+    setInterval(updateTime, 1000);
+});
