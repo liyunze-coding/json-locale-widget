@@ -1,0 +1,69 @@
+/* edit the properties here */
+:root {
+	--font-type: monospace;
+
+	--font-size: 2rem;
+
+	--background-color: rgba(0, 0, 0, 0.8);
+
+	--locale-width: 800px;
+	--locale-height: 60px;
+
+	--curly-brackets-color: #dddd00;
+	--key-color: cyan;
+	--value-color: #ffae20;
+	--colon-color: white;
+
+	/* You can edit more below */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+	height: 100vh;
+
+	color: white;
+}
+
+#container {
+	font-family: var(--font-type), sans-serif;
+
+	width: var(--locale-width);
+	height: var(--locale-height);
+
+	background: var(--background-color);
+	color: var(--colon-color);
+	font-size: var(--font-size);
+
+	/* adjust roundness here */
+	border-radius: 0;
+
+	/* vertical center (start, center, end) */
+	align-items: center;
+
+	/* horizontal center (start, center, end) */
+	justify-content: center;
+
+	display: flex;
+	overflow: hidden;
+}
+
+.value {
+	color: var(--value-color);
+}
+
+.key {
+	color: var(--key-color);
+}
+
+.curly-bracket {
+	color: var(--curly-brackets-color);
+}

@@ -1,0 +1,73 @@
+/* edit the properties here */
+:root {
+	--font-type: monospace;
+
+	--font-size: 1.5rem;
+
+	--background-color: rgba(0, 0, 0, 0.8);
+
+	--locale-width: 450px;
+	--locale-height: 250px;
+
+	--indent: 2rem;
+
+	--curly-brackets-color: #dddd00;
+	--key-color: cyan;
+	--value-color: #ffae20;
+
+	/* You can edit more below */
+}
+
+#locale {
+	background: var(--background-color);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	border-radius: 2rem;
+
+	width: var(--locale-width);
+	height: var(--locale-height);
+
+	font-size: var(--font-size);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+
+	color: white;
+
+	font-family: var(--font-type), monospace, sans-serif;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.indent {
+	margin-left: var(--indent);
+}
+
+.curly-bracket {
+	color: var(--curly-brackets-color);
+}
+
+.key {
+	color: var(--key-color);
+}
+
+.value {
+	color: var(--value-color);
+}
