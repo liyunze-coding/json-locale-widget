@@ -1,7 +1,7 @@
 function updateTime(timeElement, dateElement) {
 	let date = new Date();
 	let time = date.toLocaleTimeString();
-	let formattedDate = date.toLocaleDateString("en-UK", {
+	let formattedDate = date.toLocaleDateString("en-GB", {
 		day: "numeric",
 		month: "short",
 		year: "numeric",
