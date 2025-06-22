@@ -5,12 +5,14 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./locale.css" />
+		<script src="./lib/dayjs.min.js"></script>
 		<script defer src="./locale.js"></script>
 		<title>time locale</title>
 	</head>
 
 	<body>
 		<div id="container">
+			<!-- Ugly formatting necessary to eliminate whitespace -->
 			<span class="curly-bracket">&#123;</span
 			><span class="key">"time"</span>:
 			<span class="value">"<span id="time"></span>"</span>,

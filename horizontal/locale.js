@@ -1,14 +1,10 @@
 function updateTime(timeElement, dateElement) {
-	let date = new Date();
-	let time = date.toLocaleTimeString();
-	let current_day = date.toLocaleDateString("en-GB", {
-		day: "numeric",
-		month: "short",
-		year: "numeric",
-	});
+	let currentDate = dayjs();
+	let time = currentDate.format("h:mm:ss A");
+	let date = currentDate.format("YYYY-MM-DD");
 
 	timeElement.innerText = time;
-	dateElement.innerText = current_day;
+	dateElement.innerText = date;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
